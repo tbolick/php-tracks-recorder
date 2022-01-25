@@ -52,6 +52,7 @@ class OwntracksRecorder extends AbstractRecorder
         if (array_key_exists('alt', $data)) $rec->alt = intval($data['alt']);
         if (array_key_exists('batt', $data)) $rec->batt = intval($data['batt']);
         if (array_key_exists('cog', $data)) $rec->cog = intval($data['cog']);
+        if (array_key_exists('inregions', $data)) $rec->desc = "/".join($data['inregions'],"/")."/";        
         if (array_key_exists('desc', $data)) $rec->desc = strval($data['desc']);
         if (array_key_exists('event', $data)) $rec->event = strval($data['event']);
         if (array_key_exists('lat', $data)) $rec->lat = floatval($data['lat']);
